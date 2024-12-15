@@ -1,3 +1,5 @@
+import Image from 'next/image'; // Import the Image component from Next.js
+
 export const metadata = {
   title: "Home",
 };
@@ -20,10 +22,13 @@ export default function HomePage() {
 
       {/* Image Section */}
       <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
-        <img
-          src="/h-1.png"
-          alt="Rocket Chair"
-          className="w-full max-w-md lg:max-w-lg rounded-lg object-contain"
+        <Image
+          src="/h-1.png" // Path to the image
+          alt="Rocket Chair" // Alt text for accessibility
+          width={400} // Set image width
+          height={400} // Set image height
+          className="rounded-lg object-contain"
+          priority // Optimizes the image to load faster
         />
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; // Import Next.js Image component
 
 export const metadata = {
   title: "Shop",
@@ -10,13 +11,15 @@ const Page = () => {
       {/* Header Section */}
       <header className="relative h-48 bg-gray-100 flex items-center justify-center">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/shop.jpg"
             alt="Shop Banner"
-            className="h-full w-full object-cover"
+            layout="fill" // Makes the image fill the container
+            objectFit="cover" // Ensures the image covers the entire area
+            priority // Optimizes the image for fast loading
           />
         </div>
-        <h1 className="text-3xl font-bold z-10 text-blacke">Shop</h1>
+        <h1 className="text-3xl font-bold z-10 text-black">Shop</h1>
       </header>
 
       {/* Filter and Sort Section */}
@@ -44,36 +47,44 @@ const Page = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Product Cards */}
           <div className="border rounded-lg p-4 text-center hover:shadow-lg transition">
-            <img
+            <Image
               src="/s-2.png"
               alt="Trenton modular sofa"
+              width={200}
+              height={160} // Specify width and height for optimization
               className="h-40 w-full object-cover mb-4 rounded"
             />
             <h3 className="text-lg font-medium">Trenton modular sofa</h3>
             <p className="text-gray-600">Rs. 25,000.00</p>
           </div>
           <div className="border rounded-lg p-4 text-center hover:shadow-lg transition">
-            <img
+            <Image
               src="/s-3.png"
               alt="Granite dining table"
+              width={200}
+              height={160}
               className="h-40 w-full object-cover mb-4 rounded"
             />
             <h3 className="text-lg font-medium">Granite dining table</h3>
             <p className="text-gray-600">Rs. 25,000.00</p>
           </div>
           <div className="border rounded-lg p-4 text-center hover:shadow-lg transition">
-            <img
+            <Image
               src="/s-4.png"
               alt="Outdoor bar table"
+              width={200}
+              height={160}
               className="h-40 w-full object-cover mb-4 rounded"
             />
             <h3 className="text-lg font-medium">Outdoor bar table</h3>
             <p className="text-gray-600">Rs. 25,000.00</p>
           </div>
           <div className="border rounded-lg p-4 text-center hover:shadow-lg transition">
-            <img
+            <Image
               src="/s-10.png"
               alt="Plain console table"
+              width={200}
+              height={160}
               className="h-40 w-full object-cover mb-4 rounded"
             />
             <h3 className="text-lg font-medium">Plain console table</h3>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image'; // Import Next.js Image component
 import React from 'react';
 
 export const metadata = {
@@ -15,18 +16,22 @@ const page = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="border rounded-lg p-4 text-center">
-            <img
+            <Image
               src="/h-2.png"
               alt="Side Table"
+              width={400} // Add width
+              height={400} // Add height
               className="h-40 w-full object-cover mb-4 rounded"
             />
             <h3 className="text-lg font-medium">Side Table</h3>
             <p className="text-gray-600">Rs. 25,000.00</p>
           </div>
           <div className="border rounded-lg p-4 text-center">
-            <img
+            <Image
               src="/h-8.png"
               alt="Sofa"
+              width={400} // Add width
+              height={400} // Add height
               className="h-40 w-full object-cover mb-4 rounded"
             />
             <h3 className="text-lg font-medium">Asgaard Sofa</h3>
@@ -40,9 +45,11 @@ const page = () => {
         <h2 className="text-3xl font-bold mb-8 text-center">Our Blogs</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="border rounded-lg p-4">
-            <img
+            <Image
               src="/h-9.jpg"
               alt="Blog 1"
+              width={400} // Add width
+              height={400} // Add height
               className="h-40 w-full object-cover mb-4 rounded"
             />
             <h3 className="text-lg font-medium">
@@ -57,9 +64,11 @@ const page = () => {
             </Link>
           </div>
           <div className="border rounded-lg p-4">
-            <img
+            <Image
               src="/h-10.jpg"
               alt="Blog 2"
+              width={400} // Add width
+              height={400} // Add height
               className="h-40 w-full object-cover mb-4 rounded"
             />
             <h3 className="text-lg font-medium">

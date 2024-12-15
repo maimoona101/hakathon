@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; // Import Next.js Image component
 
 export const metadata = {
   title: "Contact",
@@ -10,10 +11,11 @@ const Page = () => {
       {/* Header Section */}
       <header className="relative h-48 bg-gray-100 flex items-center justify-center">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/shop.jpg"
             alt="Side Table"
-            className="h-full w-full object-cover"
+            layout="fill" // Automatically adjusts the image to fill the container
+            objectFit="cover" // Ensures the image covers the entire area
           />
         </div>
         <h1 className="text-3xl font-bold z-10 text-black">Contact</h1>
